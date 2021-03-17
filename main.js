@@ -23,3 +23,19 @@ function makeTransparent() {
 }
 
 const toggler = document.querySelector('#toggle')
+toggler.addEventListener('click', makeToggle)
+function makeToggle() {
+document.querySelector('#row').style.backgroundColor = 'pink'
+}
+
+const larger = document.querySelector('#biggify')
+larger.addEventListener('mouseover', makeLarger)
+function makeLarger() {
+larger.style.width = '200px'
+}
+
+const notHovered = document.querySelector('#biggify')
+notHovered.addEventListener('mouseout', makeSmaller)
+function makeSmaller() {
+larger.style.width = '150px'
+}
